@@ -30,6 +30,7 @@ const MainHub = () => {
             <div className="test">
             <h2>Welcome {userName}</h2>
             <p>**Delete is not functional**</p>
+            <p>**Refresh bug is being worked on**</p>
             </div>
             <RoutesTable />
             <div className="table-totals-container">
