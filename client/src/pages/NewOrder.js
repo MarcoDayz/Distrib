@@ -82,8 +82,7 @@ const NewOrder = () => {
             // console.log(confirmedOrder)
             // const createOrder = await axios.put(`http://localhost:4000/stores/new-order`, confirmedOrder)
             const createOrder = await axios.put(`https://distrib-api.onrender.com/stores/new-order`, confirmedOrder)
-
-            console.log(createOrder.data)
+            // console.log(createOrder.data)
 
             confirmPurchaseItems.forEach(async item => {
                 // delete item.item_total
@@ -91,9 +90,9 @@ const NewOrder = () => {
                 item.item_price = parseFloat(item.item_price)
                 item.item_qty = parseInt(item.item_qty)
                 // const purchaseresponse = await axios.put(`http://localhost:4000/stores/new-purchase`, item)
-                const purchaseresponse = await axios.put(`https://distrib-api.onrender.com/stores/new-purchase`, item)
-
-                console.log(purchaseresponse.data)
+                // const purchaseresponse = await axios.put(`https://distrib-api.onrender.com/stores/new-purchase`, item)
+                await axios.put(`https://distrib-api.onrender.com/stores/new-purchase`, item)
+                // console.log(purchaseresponse.data)
             })
             setCartList([])
             nav('/')
