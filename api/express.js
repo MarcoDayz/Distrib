@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
+import { config } from 'dotenv';
 import storeRoute from './model/storeRoutes.js';
 import auth from './auth/authRoutes.js';
 import products from './model/productsRoute.js';
+config('.env')
+
 const app = express()
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors())
 app.use(express.json())
