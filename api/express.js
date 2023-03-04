@@ -13,9 +13,9 @@ const port = process.env.PORT || 4000;
 app.use(cors())
 app.use(express.json())
 
-// app.get("/", (req, res) => {
-//     res.send("Hello World from Server!")
-// });
+app.get("/", (req, res) => {
+    res.send("API for Distrib")
+});
 
 app.use('/stores', storeRoute)
 app.use('/inventory', products)

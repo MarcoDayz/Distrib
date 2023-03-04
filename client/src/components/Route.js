@@ -21,7 +21,8 @@ const Route = ({route}) => {
         //using try catch block
         //make api call to the store id; returning all orders histories
         try{
-            const response = await axios.get(`http://localhost:4000/stores/orderhistory/${route.store_id}`)
+            // const response = await axios.get(`http://localhost:4000/stores/orderhistory/${route.store_id}`)
+            const response = await axios.get(`https://distrib-api.onrender.com/stores/orderhistory/${route.store_id}`)
             const recentOrder = response.data[0]
             sessionStorage.setItem('store', route.store_id)
             setStoreOrders(response.data)

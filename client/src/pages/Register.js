@@ -31,7 +31,9 @@ const Register = () => {
                 email: email,
                 confirmPassword: confirmPW
             }
-            const response = await axios.post('http://localhost:4000/account/sign-up', newAccount)
+            // const response = await axios.post('http://localhost:4000/account/sign-up', newAccount)
+            const response = await axios.post('https://distrib-api.onrender.com/account/sign-up', newAccount)
+
             if(!response.data.auth){
                 setResponseMessage(response.data.error)
                 setAuth(response.data.auth)

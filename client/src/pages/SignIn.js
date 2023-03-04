@@ -24,7 +24,9 @@ const SignIn = () => {
             password: password
         }
         try {
-            const {data} = await axios.post('http://localhost:4000/account/sign-in',accountObj)
+            // const {data} = await axios.post('http://localhost:4000/account/sign-in',accountObj)
+            const {data} = await axios.post('https://distrib-api.onrender.com/account/sign-in',accountObj)
+
             // console.log(data)
             if(!data.auth){
                 setIsLoading(false)

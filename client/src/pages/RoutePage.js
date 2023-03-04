@@ -21,7 +21,9 @@ const RoutePage = () => {
         // console.log(e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText)
         setIsLoading(true)
         try {
-            const response = await axios.get(`http://localhost:4000/stores/purchase-items/${e.target.id}`)
+            // const response = await axios.get(`http://localhost:4000/stores/purchase-items/${e.target.id}`)
+            const response = await axios.get(`https://distrib-api.onrender.com/stores/purchase-items/${e.target.id}`)
+
             console.log(response.data)
             setPurchasedOrders(response.data)
             setCurrentPurchaseOrder(e.target.id)

@@ -17,7 +17,7 @@ const RoutesTable = () => {
                 // console.log(userId)
                 //route to get by userID
                 // const response = await axios.get(`http://localhost:4000/stores/all-stores/${userId}`)
-                const response = await axios.get(`http://localhost:4000/stores/all-stores/`)
+                const response = await axios.get(`https://distrib-api.onrender.com/stores/all-stores/`)
                 console.log(response.data)
                 calculateRouteTotal(response.data)
                 setStoreData(response.data)

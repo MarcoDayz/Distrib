@@ -54,7 +54,7 @@ const App = () => {
                     <Route path={`/dashboard/${userName}/settings`} element={<Settings />}/>
                 </Route>
                 <Route path="/register" element={<Register />} />
-                <Route path='/loading' element={<Loading />} />
+                {/* <Route path='/loading' element={<Loading />} /> */}
                 <Route path="/*" element={<h1>ERROR PAGE NOT FOUND</h1>}/>
             </Routes>
         </div>

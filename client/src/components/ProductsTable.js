@@ -13,7 +13,9 @@ const ProductTable = () => {
         setIsLoading(true)
         try {
             const getProducts = async () => {
-                const response = await axios.get('http://localhost:4000/inventory/products')
+                // const response = await axios.get('http://localhost:4000/inventory/products')
+                const response = await axios.get('https://distrib-api.onrender.com/inventory/products')
+
                 setInventory(response.data)
                 // console.log(response.data)
                 setIsLoading(false)
